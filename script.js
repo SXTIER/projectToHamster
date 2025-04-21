@@ -1,4 +1,3 @@
-// สร้างกล่อง
 const box = document.createElement('div');
 const boxSize = 60;
 const boxMargin = 10;
@@ -13,7 +12,6 @@ box.style.borderRadius = '20px';
 box.style.backgroundColor = randomColor();
 box.style.transition = 'background-color 2.5s ease';
 
-// ตำแหน่งและความเร็ว
 let posX = 0;
 let velocityX = 0.5;
 
@@ -22,21 +20,16 @@ function randomColor() {
   return `hsl(${hue}, 80%, 60%)`;
 }
 
-// เปลี่ยนสีแบบ smooth ทุก 3 วิ
-// setInterval(() => {
-//   box.style.backgroundColor = randomColor();
-// }, 3000);
 
-// ฟังก์ชันสำหรับสร้างฟองน้ำแบบไม่ใช่ element
 function createBubbleEffect() {
   const bubble = document.createElement('div');
 
-  const size = Math.random() * 40 + 10; // 10 - 50px
+  const size = Math.random() * 40 + 10; // 10 ถึง 50px
   const posX = Math.random() * window.innerWidth;
-  const duration = Math.random() * 3 + 2; // 2 - 5 วินาที
+  const duration = Math.random() * 3 + 2; // 2 ถึง 5 วินาที
 
   bubble.style.position = 'absolute';
-  bubble.style.bottom = '-60px'; // เริ่มใต้จอ
+  bubble.style.bottom = '-60px'; 
   bubble.style.left = `${posX}px`;
   bubble.style.width = `${size}px`;
   bubble.style.height = `${size}px`;
@@ -50,13 +43,13 @@ function createBubbleEffect() {
 
   document.body.appendChild(bubble);
 
-  // ลบฟองน้ำเมื่อ animation เสร็จ
+  // ลบฟองน้ำ
   setTimeout(() => {
     bubble.remove();
-  }, duration * 1000);
+  }, duration * 1000); //ก้ผ่านไป 1 วิ
 }
 
-// สร้าง animation สำหรับฟองน้ำ
+// animation ฟองน้ำ
 const styleSheet = document.createElement('style');
 styleSheet.type = 'text/css';
 styleSheet.innerText = `
