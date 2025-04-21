@@ -1,0 +1,73 @@
+html {
+    scroll-behavior: smooth;
+    overflow: hidden;
+}
+
+
+body {
+    background-color: #3F4040;
+    overflow: hidden;
+}
+
+nav button,
+p {
+    font-family: 'Jaro', sans-serif;
+    color: white;
+    font-size: 20px;
+}
+
+nav img {
+    width: 30px;
+    height: auto;
+}
+
+nav button {
+    background-color: #274438;
+    border-radius: 10px;
+    font-size: 20px;
+    padding-left: 15px;
+    padding-right: 17px;
+    transition: all 0.1s ease-in-out;
+}
+
+nav button:hover {
+    transform: scale(1.1);
+    box-shadow: rgb(105, 116, 107) 3px 2px 2px;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    width: 100%;
+}
+
+.center button {
+    background-color: #313333;
+    color: white;
+    font-family: "Irish Grover", system-ui;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 5px;
+    padding-left: 35px;
+    padding-right: 35px;
+    transition: all 0.1s ease;
+}
+
+.center button:hover {
+    transform: scale(1.1);
+    box-shadow: rgb(255, 200, 0) 2px 2px;
+}
+
+.center img {
+    margin: 20px;
+    width: 450px;
+    height: auto;
+}
+.middle {
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+}
